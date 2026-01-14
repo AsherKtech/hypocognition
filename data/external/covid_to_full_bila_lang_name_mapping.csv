@@ -1,0 +1,50 @@
+code,study_language_names,bila_language_name_mapping,possible_alternative_bila_language_name_mappings
+ZH-S,Simplified Chinese,Mandarin Chinese,"Beijing Mandarin, Wu Chinese"
+EN,English,None,"Midland American English, Singlish, Devon, Sussex, Essex"
+ID,Indonesian,Indonesian,"Standard Malay, Central Malay, Baba Malay"
+ZH-T,Traditional Chinese,Mandarin Chinese,"Yue Chinese, Min Dong Chinese, Min Nan Chinese, Hakka Chinese"
+VI,Vietnamese,Vietnamese,Nung (Viet Nam)
+DA,Danish,Danish,
+AR,Arabic,Arabic,"Egyptian Arabic, Levantine Arabic, Moroccan Arabic, Gulf Arabic, Sanaani Arabic, Yemeni Arabic"
+ES,Spanish,Spanish,"Latin American Spanish, Mexican Spanish"
+AFRI,Afrikaans,Afrikaans,Dutch
+ES-ES,Spanish (Spain),Spanish,
+ET,Estonian,Estonian,Finnish
+FR,French,French,"Old French, Cajun French, Louisiana Creole French"
+JA,Japanese,Japanese,Middle Chinese
+SR,Serbian,Serbian-Croatian-Bosnian,
+ZH-TW,Traditional Chinese (Taiwan),Mandarin Chinese,"Min Nan Chinese, Hakka Chinese"
+PT-BR,Brazilian Portuguese,Brazilian Portuguese,Portuguese
+PT,Portuguese,Portuguese,Brazilian Portuguese
+IT,Italian,Italian,Sicilian
+BG,Bulgarian,Bulgarian,
+RU,Russian,Russian,Belarusian
+FA,Persian,Persian,
+UK,Ukrainian,Ukrainian,
+NL,Dutch,Dutch,Western Flemish
+DE,German,German,"Moselle Franconian, Plautdietsch, Pennsylvania German"
+MS,Malay,Standard Malay,"Central Malay, Baba Malay, Malayo"
+TR,Turkish,Turkish,Turkmen
+HR,Croatian,Serbian-Croatian-Bosnian,
+ISL,Icelandic,Icelandic,Old Norse
+NO,Norwegian,Norwegian,
+RO,Romanian,Romanian,Aromanian
+FI,Finnish,Finnish,Estonian
+KAT,Georgian,Georgian,
+SV,Swedish,Swedish,
+EL,Greek,Greek,
+CA,Catalan,None,"Spanish, French"
+HU,Hungarian,Hungarian,
+SL,Slovenian,Slovenian,
+CS,Czech,Czech,
+PL,Polish,Polish,
+SK,Slovak,Slovak,
+MAR,Marathi,Marathi,
+HI,Hindi,Hindi,"Hindustani, Caribbean Hindustani"
+HE,Hebrew,Hebrew,Ancient Hebrew
+KO,Korean,Korean,
+KAZ,Kazakh,Kazakh,
+ML,Malayalam,Malayalam,
+MALTI,Maltese,None,"Arabic, Italian"
+FILIP,Filipino,Filipino,Tagalog-Pilipino
+DARI,Dari,Persian,

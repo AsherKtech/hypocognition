@@ -1,0 +1,35 @@
+study_language_names,bila_language_name_mapping,possible_alternative_bila_language_name_mappings,easy
+Malay,Standard Malay,Indonesian,1
+Indonesian,Indonesian,Standard Malay,1
+Simplified Chinese,Mandarin Chinese,"Beijing Mandarin, Yue Chinese, Hakka Chinese",0
+Spanish (Spain),Spanish,Latin American Spanish,1
+Arabic,Arabic,"Egyptian Arabic, Levantine Arabic, Moroccan Arabic, Gulf Arabic, Sanaani Arabic, Yemeni Arabic",1
+Vietnamese,Vietnamese,—,1
+Maltese,[No direct match],"Arabic, Italian (linguistically related)",0
+Russian,Russian,—,1
+Hungarian,Hungarian,—,1
+Italian,Italian,Sicilian,1
+Greek,Greek,—,1
+Dutch,Dutch,Western Flemish,1
+German,German,"Moselle Franconian, Plautdietsch",1
+Swedish,Swedish,—,1
+Bulgarian,Bulgarian,—,1
+French,French,"Cajun French, Louisiana Creole French, Old French",1
+Danish,Danish,—,1
+Traditional Chinese (Taiwan),Mandarin Chinese,"Min Nan Chinese, Hakka Chinese",0
+Persian,Persian,—,1
+Finnish,Finnish,—,1
+Icelandic,Icelandic,Old Norse,1
+Ukrainian,Ukrainian,—,1
+Turkish,Turkish,—,1
+Brazilian Portuguese,Portuguese,—,0
+Serbian,Serbian-Croatian-Bosnian,—,0
+Spanish (General),Latin American Spanish,Spanish,1
+Croatian,Serbian-Croatian-Bosnian,—,0
+Catalan,[No direct match],"Spanish, French (Romance family)",0
+Hebrew,Hebrew,Ancient Hebrew,1
+Japanese,Japanese,—,1
+Afrikaans,Afrikaans,Dutch,1
+Georgian,Georgian,—,1
+Traditional Chinese,Mandarin Chinese,"Yue Chinese, Min Dong Chinese, Min Nan Chinese",0
+Marathi,Marathi,—,1

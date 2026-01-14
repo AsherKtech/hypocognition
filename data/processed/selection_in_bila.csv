@@ -1,0 +1,52 @@
+,countryname,language,study_language_names,bila_language_name_mapping,lang_responses,total_responses,percent,Selected,reason,possible_alternative_bila_language_name_mappings
+0,Australia,ZH-S,Simplified Chinese,Mandarin Chinese,181,378,47.883597883597886,0, We will leave out Australia for now because it has only English and chinese. Perhaps we will use the chinese respobse for robustness testing,"Beijing Mandarin, Wu Chinese"
+1,Brazil,PT-BR,Brazilian Portuguese,Brazilian Portuguese,306,325,94.15384615384616,1,Let's use Brazilian Portuguese for Brazil,Portuguese
+2,Bulgaria,BG,Bulgarian,Bulgarian,269,276,97.46376811594203,1, Let's use Bulgarian for Bulgaria,
+3,Canada,EN,English,,195,286,68.18181818181817,0,"Doesn't look good for Canada, we will drop them since they are primarily English ","Midland American English, Singlish, Devon, Sussex, Essex"
+4,Chile,ES,Spanish,Spanish,469,493,95.131845841785,1, Let's use Spanish (General) for chile,"Latin American Spanish, Mexican Spanish"
+5,China,ZH-S,Simplified Chinese,Mandarin Chinese,1988,2009,98.95470383275261,1, Let's use Simplified Chinese for china,"Beijing Mandarin, Wu Chinese"
+6,Colombia,ES,Spanish,Spanish,122,237,51.47679324894515,1,Let's use Spanish (General) for Colombia  ,"Latin American Spanish, Mexican Spanish"
+7,Croatia,HR,Croatian,Serbian-Croatian-Bosnian,524,528,99.24242424242425,1, Let's use croatian for croatia,
+8,Curacao,NL,Dutch,Dutch,180,235,76.59574468085107,1, Let's use Dutch for Curacao,Western Flemish
+9,Denmark,DA,Danish,Danish,148,233,63.519313304721024,1, Let's use Danish for Denmark,
+10,Egypt,AR,Arabic,Arabic,817,824,99.1504854368932,1,  Let's use Arabic for Eygpt,"Egyptian Arabic, Levantine Arabic, Moroccan Arabic, Gulf Arabic, Sanaani Arabic, Yemeni Arabic"
+11,Finland,FI,Finnish,Finnish,260,289,89.96539792387543,1, Let's use Finnish for Finland,Estonian
+12,France,FR,French,French,257,363,70.79889807162535,1, Let's use french for france,"Old French, Cajun French, Louisiana Creole French"
+13,Georgia,KAT,Georgian,Georgian,234,236,99.15254237288136,1,  Let's use Georgian for Georgia,
+14,Germany,DE,German,German,291,567,51.32275132275132,1, Let's use German for Germany,"Moselle Franconian, Plautdietsch, Pennsylvania German"
+15,Ghana,EN,English,,327,328,99.6951219512195,0," doesnt look good for Ghana, well drop it","Midland American English, Singlish, Devon, Sussex, Essex"
+16,Greece,EL,Greek,Greek,227,253,89.72332015810277,1, Let's use Greek for Greece,
+17,Hong Kong (S.A.R),ZH-T,Traditional Chinese,Mandarin Chinese,139,228,60.96491228070175,1, Let's use Traditional Chinese for Hong Kong,"Yue Chinese, Min Dong Chinese, Min Nan Chinese, Hakka Chinese"
+18,Hungary,HU,Hungarian,Hungarian,256,464,55.172413793103445,1, Let's use Hungarian for Hungary,
+19,Iceland,ISL,Icelandic,Icelandic,348,354,98.30508474576271,1, Let's use Icelandic for Iceland,Old Norse
+20,India,MAR,Marathi,Marathi,56,243,23.045267489711936,1," This is a tough call. I think we will use Maranthi, despite it being pretty small",
+21,Indonesia,ID,Indonesian,Indonesian,648,656,98.78048780487805,1, Let's use Indonesian for indonesia,"Standard Malay, Central Malay, Baba Malay"
+22,Iran,FA,Persian,Persian,187,195,95.8974358974359,1, Let's use persian for Iran,
+23,Ireland,EN,English,,351,362,96.96132596685084,0," Doesn't look good for Ireland, their primary language is definitely Elnglish. we will drop them","Midland American English, Singlish, Devon, Sussex, Essex"
+24,Israel,HE,Hebrew,Hebrew,151,211,71.56398104265402,1, Lets use Hebrew for Israel,Ancient Hebrew
+25,Italy,IT,Italian,Italian,426,466,91.41630901287554,1, lets use Italian for Italy,Sicilian
+26,Japan,JA,Japanese,Japanese,1288,1352,95.26627218934911,1, Let's use Japanese for Japan,Middle Chinese
+27,Jordan,AR,Arabic,Arabic,233,236,98.72881355932203,1,  Let's use Arabic for Jordan,"Egyptian Arabic, Levantine Arabic, Moroccan Arabic, Gulf Arabic, Sanaani Arabic, Yemeni Arabic"
+28,Kazakhstan,RU,Russian,Russian,279,291,95.87628865979381,1, Let's use Russian for Kazakhstan,Belarusian
+29,Kenya,EN,English,,207,207,100.0,0,"Nope, sorry Kenya, to much english","Midland American English, Singlish, Devon, Sussex, Essex"
+30,Malaysia,MS,Malay,Standard Malay,155,214,72.42990654205607,1, Let's use Malay for Malaysia,"Central Malay, Baba Malay, Malayo"
+31,Malta,MALTI,Maltese,,284,1290,22.015503875968992,1," Tough call, we will use Maltese for Malta instead of english","Arabic, Italian"
+32,Mongolia,EN,English,,188,208,90.38461538461539,0," Nope, sorry mongolia, too much english","Midland American English, Singlish, Devon, Sussex, Essex"
+33,Netherlands,NL,Dutch,Dutch,524,1348,38.87240356083086,1, Let's use dutch for the Netherlands,Western Flemish
+34,New Zealand,EN,English,,150,262,57.25190839694656,0," We're actually not going to keep Australia and New Zealand in for now, perhaps we will use them for robustness testing since they have such high percentages of chinese response scores","Midland American English, Singlish, Devon, Sussex, Essex"
+35,Pakistan,EN,English,,555,557,99.64093357271095,0," nope, sorry pakistan, too much english","Midland American English, Singlish, Devon, Sussex, Essex"
+36,Peru,ES-ES,Spanish (Spain),Spanish,215,357,60.22408963585434,1, lets use Spanish spain for PEru,
+37,Russia,RU,Russian,Russian,577,586,98.46416382252559,1, # lets use russian for russia,Belarusian
+38,Serbia,SR,Serbian,Serbian-Croatian-Bosnian,351,354,99.15254237288136,1, lets use serbian for serbia,
+39,Singapore,EN,English,,187,208,89.90384615384616,0," nope, sorry singapore, too much english","Midland American English, Singlish, Devon, Sussex, Essex"
+40,South Africa,AFRI,Afrikaans,Afrikaans,112,426,26.291079812206576,1," Interesting, we will use Africaans for south africa even though it only has 26%",Dutch
+41,Spain,ES-ES,Spanish (Spain),Spanish,105,418,25.11961722488038,1," I know we don't have Catalan dictionary, so we will pre-emptively use Spanish Spain",
+42,Sweden,SV,Swedish,Swedish,400,529,75.61436672967864,1, We will use Swedish for Sweden,
+43,Syria,AR,Arabic,Arabic,247,248,99.59677419354838,1, we will use Arabic for Syria,"Egyptian Arabic, Levantine Arabic, Moroccan Arabic, Gulf Arabic, Sanaani Arabic, Yemeni Arabic"
+44,Taiwan,ZH-TW,Traditional Chinese (Taiwan),Mandarin Chinese,747,761,98.16031537450722,1,  we will use Traditional Chinese (Taiwan) for Taiwan,"Min Nan Chinese, Hakka Chinese"
+45,Trinidad and Tobago,EN,English,,333,334,99.7005988023952,0," nope, sorry T&T, too much english","Midland American English, Singlish, Devon, Sussex, Essex"
+46,Turkey,TR,Turkish,Turkish,253,346,73.121387283237,1, # we will use Turkish for turkey,Turkmen
+47,Ukraine,UK,Ukrainian,Ukrainian,657,698,94.12607449856733,1, we will use ukrainian for Ukraine,
+48,United Kingdom (UK),EN,English,,454,662,68.58006042296071,0," nope, sorry UK, too much english","Midland American English, Singlish, Devon, Sussex, Essex"
+49,United States of America (USA),EN,English,,768,952,80.67226890756302,0," nope, sorry US, too much english","Midland American English, Singlish, Devon, Sussex, Essex"
+50,Vietnam,VI,Vietnamese,Vietnamese,292,338,86.3905325443787,1, We will use vietnamese for vietnam,Nung (Viet Nam)

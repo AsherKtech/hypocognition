@@ -1,0 +1,31 @@
+# --- Virtual Environments ---
+# Catches myenv, venv, .venv, etc.
+**/myenv/
+**/venv/
+**/.venv/
+.env
+
+# --- Python & Notebooks ---
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# --- Data Management ---
+# We keep raw data (unless it's >50MB), but ignore the outputs
+data/raw/
+data/external/
+data/temp/
+*.log
+
+# --- Distribution / Reports ---
+# If you want users to generate their own HTML reports, ignore this. 
+# If you want to show off your results on GitHub, keep them tracked.
+# reports/figures/*.html 
+
+# --- OS & IDE ---
+.DS_Store
+.Thumbs.db
+.vscode/
+.idea/
