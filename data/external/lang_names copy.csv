@@ -1,35 +1,3 @@
-Code,Language_Name
-MS,Malay
-ID,Indonesian
-ZH-S,Simplified Chinese
-ES-ES,Spanish (Spain)
-AR,Arabic
-VI,Vietnamese
-MALTI,Maltese
-RU,Russian
-HU,Hungarian
-IT,Italian
-EL,Greek
-NL,Dutch
-DE,German
-SV,Swedish
-BG,Bulgarian
-FR,French
-DA,Danish
-ZH-TW,Traditional Chinese (Taiwan)
-FA,Persian
-FI,Finnish
-ISL,Icelandic
-UK,Ukrainian
-TR,Turkish
-PT-BR,Brazilian Portuguese
-SR,Serbian
-ES,Spanish (General)
-HR,Croatian
-CA,Catalan
-HE,Hebrew
-JA,Japanese
-AFRI,Afrikaans
-KAT,Georgian
-ZH-T,Traditional Chinese
-MAR,Marathi
+version https://git-lfs.github.com/spec/v1
+oid sha256:e80a96b47d6ba4217c1e127f2904d8ef3a9f17864220350d79ea44bb6e7d2193
+size 496

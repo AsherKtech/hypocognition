@@ -14,7 +14,6 @@ __pycache__/
 
 # Ignore all files in data folders
 data/raw/*
-data/external/*
 data/processed/*
 data/temp/*
 
