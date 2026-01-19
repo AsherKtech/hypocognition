@@ -12,12 +12,18 @@ __pycache__/
 .ipynb_checkpoints/
 */.ipynb_checkpoints/*
 
-# --- Data Management ---
-# We keep raw data (unless it's >50MB), but ignore the outputs
-data/raw/
-data/external/
-data/temp/
-*.log
+# Ignore all files in data folders
+data/raw/*
+data/external/*
+data/processed/*
+data/temp/*
+
+# But keep the folders (use a placeholder file)
+!data/raw/.gitkeep
+!data/external/.gitkeep
+!data/processed/.gitkeep
+!data/temp/.gitkeep
+
 
 # --- Distribution / Reports ---
 # If you want users to generate their own HTML reports, ignore this. 
