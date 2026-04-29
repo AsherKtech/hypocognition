@@ -22,6 +22,9 @@ data/temp/*
 !data/external/.gitkeep
 !data/processed/.gitkeep
 !data/temp/.gitkeep
+!data/processed/tamir_bila_stats.csv
+!data/processed/selection_in_covid.csv
+!data/processed/covid_bila_merge.csv
 
 
 # --- Distribution / Reports ---
