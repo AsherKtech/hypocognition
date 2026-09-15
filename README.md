@@ -153,12 +153,16 @@ python setup_project.py
 * [create_outline_selection.py](src/create_outline_selection.py): 
     * A slimmed down pipeline file which takes in [`Covid51countries.csv`](https://osf.io/s5puc/files/cemh7)
     * pre-cleans it
-    * outputs a template for selecting what language is desired for each response country called `selection_in_bila.csv`
+    * outputs a template called `data/processed/outline_selection.csv` for selecting what language is desired for each response country. fill out this template by:
+        * For each "countryname":
+            * Select 1 of the available survey response options in "Language_Name". The subsequent processing script was not designed for selecting more than 1 response langauge per country and we cannot gaurantee that doing that will work.
+            * Confirm that the dictionary in the "bila_language_name_mapping" column is correct for your "Language_Name" choice. If not, insert a different value in the "bila_language_name_mapping" from those listed in the "possible_alternative_bila_language_name_mappings" column. If none of those are what you want, it's unlikely that any other approriate dictionaries exist. Feel free to search the `bila_long_noun_lemmatized_full.csv` dataset for furthur alternative dictionary mappings.
+            * Finally, Select "1" in the "Selection" column for that row. This signifies that you selected a particular survey response "Language_Name" for a particular "countryname" and selected a particular bila dictionary to map that language to in order to obtain lexical ellaboration data for the survey results.
     * outputs the pre-cleaned sun covid dataset named `pre_cleaned_Covid51countries.csv`
 
 * [create_covid_bila_merge.py](src/create_covid_bila_merge.py): 
     * which takes in `pre_cleaned_Covid51countries.csv`
-    * and takes in `selection_in_bila.csv`. this is a template which the user has filled out manually, specifying which language is used for each response country
+    * and takes in `data/processed/selection_in_bila.csv`. this is a template which the user has filled out manually, specifying which language is used for each response country
     * crafts the statistical final product by merging the selected sun covid data with corresponding lexical ellaboration data from the BILA dataset
     * outputs [covid_bila_merge.csv](data/processed/covid_bila_merge.csv)
     * outputs `corr_covid_bila.csv` which is a corellation table

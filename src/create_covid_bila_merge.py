@@ -1,3 +1,4 @@
+#%%
 # load libraries 
 import pandas as pd
 import numpy as np
@@ -7,14 +8,16 @@ import plotly.graph_objects as go
 import plotly.express as px
 from pathlib import Path
 
+#%%
 # get the SUN covid study dataset
 Covid51countries = pd.read_csv(Path("~/Projects/hypocognition/data/processed/pre_cleaned_Covid51countries.csv").expanduser())
 
+#%%
 # Rename outline_selection.csv to selection_in_bila.csv and load it back in.
 selection = pd.read_csv(Path("~/Projects/hypocognition/data/processed/selection_in_bila.csv").expanduser(), index_col=0).reset_index(drop=True)
 selection = selection[selection['Selected']==1].rename(columns={'study_language_names':"Language_Name"} )
 
-
+#%%
 # Lets try filtering the dataset using our new selection
 filtered = Covid51countries.merge(
     selection,
@@ -24,6 +27,8 @@ filtered = Covid51countries.merge(
 
 filtered.to_csv(Path("~/Projects/hypocognition/data/processed/selection_in_covid.csv").expanduser())
 
+
+#%%
 emotions = ['admiration', 'calm', 'compassion',
        'determination', 'moved', 'gratitude', 'hope', 'love', 'relief',
        'pleasure', 'anger', 'anxiety', 'boredom', 'confusion', 'disgust',
@@ -37,9 +42,13 @@ filtered=filtered[['country', 'countryname', 'Language_Name', 'lang_responses',
        'pleasure', 'anger', 'anxiety', 'boredom', 'confusion', 'disgust',
        'fear', 'frustration', 'loneliness', 'regret', 'sadness']]
 
+
+#%%
 # get the dataset of the dictionaries. We will look at how elaborated each of the twenty emotions are in each of the 39 languages
 bila_nouns_full = pd.read_csv(Path("~/Projects/hypocognition/data/raw/bila_long_noun_lemmatized_full.csv").expanduser(), index_col=0)
 
+
+#%%
 # remove stopwords as per the original bila authors
 with open(Path("~/Projects/hypocognition/data/external/stopwords.txt").expanduser()) as f:
     words = [line.strip() for line in f if line.strip()]
@@ -50,6 +59,12 @@ bila_nouns_full = bila_nouns_full[~bila_nouns_full["word"].isin(words)]
 tot_words = bila_nouns_full.groupby('id')['word'].nunique().reset_index(name='Total_words_in_dict')
 tot_counts = bila_nouns_full.groupby('id')['count'].sum().reset_index(name='Total_counts_in_dict')
 
+
+#%%
+
+
+
+#%%
 # I think we will needs these later
 dictionary_means = (
     bila_nouns_full
@@ -69,6 +84,7 @@ bila_nouns_full_emotions_filtered = bila_nouns_full_emotions[bila_nouns_full_emo
 
 filtered = filtered.loc[:, ~filtered.columns.duplicated()]
 
+#%%
 word_counts = (
     bila_nouns_full_emotions_filtered
     .groupby("langname")["word"]
@@ -76,6 +92,8 @@ word_counts = (
     .reset_index(name="n_unique_words")
 )
 
+
+#%%
 # add the rows of the emotions words which don't appear in each dictionary
 
 full_index = pd.MultiIndex.from_product(
@@ -92,7 +110,7 @@ bila_nouns_full_emotions_filtered_full = (
 )
 num_cols = ["nsenses", "count", "log_count", 'regression_elaboration', 'dictsize_data', 'simple_elaboration']
 
-
+#%%
 #set the number columns to 0 where NaN
 bila_nouns_full_emotions_filtered_full[num_cols] = bila_nouns_full_emotions_filtered_full[num_cols].fillna(0)
 meta_cols = [
@@ -107,10 +125,11 @@ bila_nouns_full_emotions_filtered_full[meta_cols] = (
     .transform("first")
 )
 
+#%%
 # now we're don emaking datasets, this is a table of just the stuff we need for correlations
 elab_per_emotion = bila_nouns_full_emotions_filtered_full[['langname',   'glottocode','word', 'count',  'id', 'year',"simple_elaboration", "regression_elaboration",	"dictsize_data"	]]
 
-
+#%%
 # Make table of the 18 languages for each country
 stats_by_country = (
     filtered
@@ -126,8 +145,8 @@ stats_by_country.columns = [
 ]
 stats_by_country = stats_by_country.reset_index()
 
-
-# it was very wide, leyts make it narrow, longer, and more robust
+#%%
+# it was very wide, lets make it narrow, longer, and more robust
 stats_long = (
     stats_by_country
     .set_index(['countryname', 'bila_language_name_mapping'])
@@ -139,6 +158,7 @@ stats_long = (
 stats_long[['word', 'stat']] = stats_long['level_2'].str.rsplit('_', n=1, expand=True)
 stats_long = stats_long.rename(columns={0: 'value'}).drop(columns='level_2')
 
+#%%
 stats_long = (
     stats_long
     .pivot_table(
@@ -149,7 +169,7 @@ stats_long = (
     .reset_index()
 )
 
-
+#%%
 #Merge our cleaned survey data with the BILA dictionary data
 merged = elab_per_emotion.merge(
     stats_long,
@@ -167,7 +187,7 @@ merged = merged.merge(
 )
 
 
-
+#%%
 merged = merged[merged['countryname'].notna()]
 
 # clarify the meaning of mean
@@ -188,9 +208,12 @@ merged = merged.sort_values(by=["langname", 'countryname','word'])
 merged = merged.reset_index(drop=True)
 merged = merged.fillna(0)
 
-
+#%%
 merged.to_csv(Path("~/Projects/hypocognition/data/processed/covid_bila_merge.csv").expanduser())
 
+
+
+#%%
 merged2 = merged.copy()
 
 # log count
@@ -202,6 +225,8 @@ merged2["abs_dist_midpoint"] = (
     merged2["response_mean"] - SCALE_MIDPOINT
 ).abs()
 
+
+#%%
 result = (
     merged2
     .groupby(["countryname", "langname", "id"])
@@ -228,5 +253,5 @@ result = (
     )
     .reset_index()
 )
-
-result.to_csv(Path("~/Projects/hypocognition/data/processed/ARABIC2corr_covid_bila.csv").expanduser())
+#%%
+result.to_csv(Path("~/Projects/hypocognition/data/processed/corr_covid_bila.csv").expanduser())
